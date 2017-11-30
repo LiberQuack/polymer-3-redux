@@ -1,0 +1,19 @@
+.form {
+
+}
+
+.form--todoinput {
+  display: block;
+  transition: .3s;
+  will-change: transform, background;
+  font-size: 1.5rem;
+  width: 100%;
+  padding: $form--todoinput--pad;
+  border-radius: 4px;
+  border: none;
+  font-weight: 300;
+  box-shadow: 0 2px 2px rgba(0,0,0,.15);
+  outline: none;
+  background: white;
+  transform: translate(0);
+}

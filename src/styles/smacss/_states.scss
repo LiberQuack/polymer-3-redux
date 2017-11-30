@@ -1,0 +1,9 @@
+//Use sass placeholders when using @extends on states
+
+%e-fade-is-visible {
+  opacity: 1;
+}
+
+%e-from-top-is-visible {
+  transform: translateY(0);
+}

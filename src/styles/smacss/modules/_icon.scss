@@ -1,0 +1,26 @@
+.icon {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+svg.icon, img.icon, .icon--figure {
+  height: 1.3em;
+  width: 1.3em;
+  flex-grow: 0;
+  display: inline-block;
+  vertical-align: middle;
+  opacity: .75;
+}
+
+.icon--text {
+  vertical-align: middle;
+}
+
+.icon--figure + .icon--text {
+  margin-left: .5em;
+}
+
+.icon--text + .icon--figure {
+  margin-left: .5em;
+}

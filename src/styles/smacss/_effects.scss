@@ -1,0 +1,50 @@
+.e-transition {
+  transition: transform $transition-time, opacity $transition-time;
+}
+
+.e-fade {
+  @extend .e-transition;
+  opacity: 0;
+  &.isVisible, &[is-visible] {
+    @extend %e-fade-is-visible;
+  }
+}
+
+.e-from-top {
+  @extend .e-transition;
+  will-change: transform !important;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1) !important;
+  transform: translateY(-15px);
+  &.isVisible, &[is-visible] {
+    @extend %e-from-top-is-visible;
+  }
+}
+
+.e-no-reverse:not([is-visible]) {
+  transition: none !important;
+}
+
+.e-rotate {
+  $icon-transition-time: .3s;
+  will-change: opacity;
+  transition: opacity $icon-transition-time, animation-play-state 0s linear 5s;
+  animation-delay: $icon-transition-time;
+  animation-duration: .8s;
+  animation-name: rotate-cyclic;
+  animation-timing-function: cubic-bezier(0.4, 0, 0, 1);
+  animation-iteration-count: 0;
+
+  &.isRotating {
+    animation-iteration-count: infinite;
+  }
+}
+
+
+@keyframes rotate-cyclic {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}

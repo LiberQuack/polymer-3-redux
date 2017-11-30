@@ -1,0 +1,13 @@
+.toditem {
+  display: block;
+  background: white;
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding: $form--todoinput--pad;
+  text-align: left;
+  cursor: pointer;
+}
+
+.toditem--checkbox {
+  margin-right: .7em;
+}

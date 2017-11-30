@@ -1,0 +1,63 @@
+/*
+  [data-tooltip]::before -> Tooltip itself
+  [data-tooltip]::after  => Tooltip Arrow
+*/
+$tooltip-background: #323232;
+$tooltip-arrow-size: 10px;
+
+[data-tooltip] {
+  position: relative;
+
+  //&:not(.isHidden):hover::before,
+  //&:not(.isHidden):focus::before,
+  //&.isVisible::before, &.isVisible {
+  //  transform: translate(0, 0);
+  //  opacity: 1;
+  //  visibility: visible;
+  //}
+
+  //&:focus {
+  //  outline: darken(#e1e1e1, 50%) solid 1px;
+  //}
+}
+
+%tooltip-default {
+  &::before {
+    position: absolute;
+    display: inline-block;
+    will-change: transform, opacity;
+    visibility: hidden;
+    transition: $transition-time;
+    opacity: 0;
+    background: $tooltip-background;
+    border-radius: 2px;
+    color: white;
+    content: attr(data-tooltip);
+    font-weight: 400;
+    padding: .5em 1em;
+    white-space: nowrap;
+    z-index: 1;
+    transition-delay: .25s;
+    height: auto;
+  }
+}
+
+[data-tooltip].tooltip-up {
+  &:hover,&:focus {
+    &::before {
+      @extend %tooltip-default;
+      text-align: center;
+      margin-bottom: $tooltip-arrow-size;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+[data-tooltip].tooltip-paragraph::before {
+  display: block;
+  white-space: pre !important;
+}

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "allowJs": true,
+    "sourceMap": true,
+    "outDir": "./dist/",
+    "removeComments": true,
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

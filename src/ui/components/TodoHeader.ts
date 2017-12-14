@@ -1,6 +1,7 @@
-import {AntiShadowElement} from "./AntiShadow";
+import {AntiShadowElement} from "../util/AntiShadowElement";
+import {connectToRedux, ReduxBindable} from "../util/ReduxConnector";
 
-class TodoHeader extends AntiShadowElement {
+class TodoHeader extends AntiShadowElement implements ReduxBindable {
 
     static get template() {
         return `
@@ -14,7 +15,12 @@ class TodoHeader extends AntiShadowElement {
         }
     }
 
-    onReduxChange(state) {
+    connectedCallback() {
+        super.connectedCallback();
+        connectToRedux(this)
+    }
+
+    stateReceiver(state) {
         this.todosCount = state.todoReducer.todos.length;
     }
 

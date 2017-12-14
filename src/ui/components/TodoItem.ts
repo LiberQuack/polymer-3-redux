@@ -1,4 +1,4 @@
-import {AntiShadowElement} from "./AntiShadow";
+import {AntiShadowElement} from "../util/AntiShadowElement";
 
 class TodoItem extends AntiShadowElement {
 

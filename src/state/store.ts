@@ -11,3 +11,4 @@ const store = createStore(
 );
 
 export { store as appState };
+export type RootState = {}

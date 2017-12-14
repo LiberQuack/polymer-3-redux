@@ -1,11 +1,16 @@
-import {appState} from "../state/store";
-import {AntiShadowElement} from "./AntiShadow";
+import {appState} from "../../state/store";
+import {AntiShadowElement} from "../util/AntiShadowElement";
+import {connectToRedux, ReduxBindable} from "../util/ReduxConnector";
 
-import "./TodoInput";
-import "./TodoItem"
+import "../components/TodoInput";
+import "../components/TodoItem"
 
+console.log(AntiShadowElement);
+console.log(connectToRedux);
+console.log(appState);
+debugger;
 
-class TodosPage extends AntiShadowElement {
+class TodosPage extends AntiShadowElement implements ReduxBindable {
 
     static get template() {
         return `
@@ -32,15 +37,16 @@ class TodosPage extends AntiShadowElement {
 
     connectedCallback() {
         super.connectedCallback();
+        connectToRedux(this);
         setTimeout(_ => this.$.todospage.classList.add("isVisible"), 50);
     }
 
-    onReduxChange(state) {
+    stateReceiver(state) {
         this.todos = state.todoReducer.todos;
     }
 
     removeTodoItem(e) {
-        appState.dispatch({type: 'REMOVE', payload: e.model.index})
+        appState.dispatch({type: 'REMOVE', payload: e.model.index} as any)
     }
 
 }

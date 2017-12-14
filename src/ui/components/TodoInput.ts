@@ -1,5 +1,5 @@
-import {AntiShadowElement} from "./AntiShadow";
-import {appState} from "../state/store";
+import {AntiShadowElement} from "../util/AntiShadowElement";
+import {appState} from "../../state/store";
 
 class TodoInput extends AntiShadowElement {
 
@@ -19,7 +19,7 @@ class TodoInput extends AntiShadowElement {
 
         this.$.todoinput.addEventListener('keypress', e => {
             if (this.tempTodo && e.keyCode === 13) {
-                appState.dispatch({type: 'ADD', payload: this.tempTodo});
+                appState.dispatch({type: 'ADD', payload: this.tempTodo} as any);
                 this.tempTodo = '';
             }
         });

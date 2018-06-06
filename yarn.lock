@@ -2,20 +2,15 @@
 # yarn lockfile v1
 
 
-"@polymer/polymer@^3.0.0-pre.1":
-  version "3.0.0-pre.1"
-  resolved "https://registry.yarnpkg.com/@polymer/polymer/-/polymer-3.0.0-pre.1.tgz#9fc26b5259aad9265f324ced02de715991d2eabe"
+"@polymer/polymer@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@polymer/polymer/-/polymer-3.0.2.tgz#626e6f9fae9716b0962ce0211e21df242153eab2"
   dependencies:
-    "@webcomponents/shadycss" "^1.0.0"
-    "@webcomponents/webcomponentsjs" "^1.0.0"
+    "@webcomponents/shadycss" "^1.2.0"
 
-"@webcomponents/shadycss@^1.0.0":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@webcomponents/shadycss/-/shadycss-1.0.6.tgz#5679919c43da77cbc884ba0bef6457111c65d7cd"
-
-"@webcomponents/webcomponentsjs@^1.0.0":
-  version "1.0.18"
-  resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-1.0.18.tgz#d8cfc5fc62e85a09e5101db573c24f87acb1d062"
+"@webcomponents/shadycss@^1.2.0":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@webcomponents/shadycss/-/shadycss-1.2.1.tgz#6e4a88534657807c8398b4bc196d0ca492182d54"
 
 "@webcomponents/webcomponentsjs@webcomponents/webcomponentsjs":
   version "1.0.20"

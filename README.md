@@ -1,37 +1,14 @@
-# Redux workflow
+# Polymer 3 + Redux
 
-1 - Define your reducer
+Simple Todo App
 
-    const initialState = {
-        todos: []
-    };
-    
-    const todoReducer = (state, action) => {
-        switch (action.type) {
-            case 'ADD': {
-                return {...state, todos: [...state.todos, action.payload]}
-            }
-            default: {
-                return initialState;
-            }
-        }
-    };
-    
-    export {todoReducer};
-    
-2 - Create your store
+## How to develop
 
-    import {createStore, combineReducers} from 'redux';
-    import {todoReducer} from "./reducers/todo-reducer";
-    
-    const reducers = combineReducers({
-        todoReducer
-    });
-    
-    const store = createStore(reducers);
-    
-    export { store };
-    
-3 - Listen to your store
+Clone the project and run
 
-    store.subscribe
+```bash
+yarn install
+yarn start
+```
+
+Then you will be able to see the application live, after that... Mess around ;)

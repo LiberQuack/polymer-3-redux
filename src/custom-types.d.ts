@@ -14,10 +14,12 @@ declare module "d3-cloud" {
 }
 
 declare module "@polymer/polymer/polymer-element" {
-    export class Element extends HTMLElement {
+    export class PolymerElement extends HTMLElement {
         connectedCallback(): void;
         disconnectedCallback(): void;
     }
+
+    export function html(template: TemplateStringsArray, values?: any[])
 }
 
 declare class Contructor {

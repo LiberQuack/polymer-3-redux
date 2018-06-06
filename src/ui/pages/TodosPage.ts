@@ -1,19 +1,15 @@
 import {appState} from "../../state/store";
 import {AntiShadowElement} from "../util/AntiShadowElement";
 import {connectToRedux, ReduxBindable} from "../util/ReduxConnector";
+import {html} from "@polymer/polymer/polymer-element"
 
 import "../components/TodoInput";
 import "../components/TodoItem"
 
-console.log(AntiShadowElement);
-console.log(connectToRedux);
-console.log(appState);
-debugger;
-
 class TodosPage extends AntiShadowElement implements ReduxBindable {
 
     static get template() {
-        return `
+        return html`
             <div id="todospage" class="l-container l-pad-30 e-fade e-from-top">
                 <todo-input></todo-input><br>
                 

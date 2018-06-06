@@ -6,10 +6,10 @@
   "scripts": {
     "dist": "webpack --config ./webpack.config.js",
     "serve": "webpack-dev-server --config webpack.config.js --open",
-    "start": "npm run serve"
+    "start": "yarn run serve"
   },
   "dependencies": {
-    "@polymer/polymer": "^3.0.0-pre.1",
+    "@polymer/polymer": "^3.0.2",
     "@webcomponents/webcomponentsjs": "webcomponents/webcomponentsjs",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"

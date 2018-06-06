@@ -1,10 +1,12 @@
 import {AntiShadowElement} from "../util/AntiShadowElement";
 import {appState} from "../../state/store";
+import {html} from "@polymer/polymer/polymer-element"
+
 
 class TodoInput extends AntiShadowElement {
 
     static get template() {
-        return `
+        return html`
             <input 
                 id="todoinput" 
                 class="form--todoinput"

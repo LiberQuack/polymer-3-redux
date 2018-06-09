@@ -1,6 +1,6 @@
 # Polymer 3 + Redux
 
-Simple Todo App
+Simple Todo App - [Demo](http://quackmartins.github.com/polymer-3-redux)
 
 ## How to develop
 

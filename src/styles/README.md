@@ -1,5 +1,5 @@
 # Bootsmacss
-A starting point for people who prefer to write their own [s]css
+A starting point for people who prefer to write their own [s]css - [link](https://github.com/QuackMartins/bootsmacss)
 
 ## First steps
 Primarily we need to understand bootsmacss objective. 
